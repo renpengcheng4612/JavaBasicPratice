@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.huawei'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.huaweicloud.com/repository/maven/'
+    }
+    maven {
+        url 'https://developer.huawei.com/repo/'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.codehaus.groovy:groovy-all:2.3.11'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
